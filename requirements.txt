@@ -1,1 +1,1 @@
-# aedev.project_templates install/runtime requirements/dependencies
+# aedev.project_tpls install/runtime requirements/dependencies
