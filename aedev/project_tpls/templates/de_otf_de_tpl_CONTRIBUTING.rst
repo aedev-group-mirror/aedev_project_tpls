@@ -49,7 +49,7 @@ using the git repository manager `grm`
    in your console change the working directory to your project's parent folder. then run the following command with
    the ``new_feature_or_fix`` part replaced by an appropriate branch name, describing shortly your contribution::
 
-      grm -b new_feature_or_fix fork {repo_group}/{project_name}
+      grm -b new_feature_or_fix fork {REPO_GROUP}/{project_name}
 
    .. note::
       the ``grm fork`` action will also add the forked repository as the remote ``upstream`` to your local
