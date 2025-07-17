@@ -4,7 +4,7 @@
 and some portions of the [__ae__ namespace(Application Environment)](https://ae.readthedocs.io "ae on rtd").
 
 the source code is available at [Gitlab]({repo_url})
-maintained by the user group {repo_group}.
+maintained by the user group {REPO_GROUP}.
 
 additional credits to:
 

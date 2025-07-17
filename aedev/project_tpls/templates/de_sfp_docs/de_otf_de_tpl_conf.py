@@ -56,7 +56,7 @@ docs_requires = root_pdv.pdv_val('docs_requires')
 project = root_pdv['project_desc']
 repo_name = root_pdv['project_name']
 version = root_pdv['project_version']
-repo_group = root_pdv['repo_group']
+repo_group = root_pdv['REPO_GROUP']
 repo_root = root_pdv['repo_root']
 
 
