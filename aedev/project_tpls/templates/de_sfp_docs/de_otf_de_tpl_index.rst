@@ -49,4 +49,4 @@ indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-* `portion repositories at {REPO_DOMAIN} <{repo_root}>`_
+* `portion repositories at {repo_domain} <{repo_root}>`_
