@@ -1,6 +1,6 @@
 """ setup of {project_desc}. """
-# ReplaceWith#({'import sys' if cae.debug else ''})#
-# ReplaceWith#({'print(f"SetUp {__name__=} {sys.executable=} {sys.argv=} {sys.path=}")' if cae.debug else ''})#
+import sys
+print(f"SetUp {__name__=} {sys.executable=} {sys.argv=} {sys.path=}")
 
 # noinspection PyUnresolvedReferences
 import setuptools
