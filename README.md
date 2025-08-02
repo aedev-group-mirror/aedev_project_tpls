@@ -5,8 +5,8 @@
 [![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](
     https://gitlab.com/aedev-group/aedev_project_tpls)
 [![LatestPyPIrelease](
-    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.41?logo=python)](
-    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.41)
+    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.42?logo=python)](
+    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.42)
 [![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](
     https://pypi.org/project/aedev-project-tpls/#history)
 
