@@ -13,18 +13,17 @@ setup_kwargs = {
         'Programming Language :: Python :: 3', 'Programming Language :: Python :: 3.9',
         'Topic :: Software Development :: Libraries :: Python Modules', 'Typing :: Typed'],
     'description': 'aedev namespace package portion project_tpls: outsourced Python project files templates',
-    'extras_require': {       'dev': [       'aedev_project_tpls', 'aedev_aedev', 'anybadge', 'coverage-badge', 'aedev_git_repo_manager',
-                       'flake8', 'mypy', 'pylint', 'pytest', 'pytest-cov', 'pytest-django', 'typing',
-                       'types-setuptools', 'wheel', 'twine'],
+    'extras_require': {       'dev': [       'aedev_project_tpls', 'aedev_aedev', 'anybadge', 'coverage-badge', 'flake8', 'mypy', 'pylint',
+                       'pytest', 'pytest-cov', 'pytest-django', 'typing', 'types-setuptools', 'wheel', 'twine'],
         'docs': [],
-        'tests': [       'anybadge', 'coverage-badge', 'aedev_git_repo_manager', 'flake8', 'mypy', 'pylint', 'pytest',
-                         'pytest-cov', 'pytest-django', 'typing', 'types-setuptools', 'wheel', 'twine']},
+        'tests': [       'anybadge', 'coverage-badge', 'flake8', 'mypy', 'pylint', 'pytest', 'pytest-cov',
+                         'pytest-django', 'typing', 'types-setuptools', 'wheel', 'twine']},
     'install_requires': [],
     'keywords': ['configuration', 'development', 'environment', 'productivity'],
     'license': 'OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
     'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev V0.3.25 -->\n'
  '<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.tpl_namespace_root V0.3.14 -->\n'
- '# project_tpls 0.3.42\n'
+ '# project_tpls 0.3.43\n'
  '\n'
  '[![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](\n'
  '    https://gitlab.com/aedev-group/aedev_project_tpls)\n'
@@ -118,7 +117,7 @@ setup_kwargs = {
     'python_requires': '>=3.9',
     'setup_requires': [],
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.42',
+    'version': '0.3.43',
     'zip_safe': False,
 }
 
