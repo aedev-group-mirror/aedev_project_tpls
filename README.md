@@ -1,6 +1,6 @@
 <!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev V0.3.25 -->
 <!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.tpl_namespace_root V0.3.14 -->
-# project_tpls 0.3.43
+# project_tpls 0.3.45
 
 [![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](
     https://gitlab.com/aedev-group/aedev_project_tpls)
