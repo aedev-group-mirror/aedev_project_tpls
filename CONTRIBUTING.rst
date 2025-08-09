@@ -1,6 +1,6 @@
 
 ..
-    THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls Vlocal
+    THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
 
 contributing
 ============

@@ -1,4 +1,4 @@
-<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls Vlocal -->
+<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal -->
 ### GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007

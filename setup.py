@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls Vlocal
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
 """ setup of aedev namespace package portion project_tpls: outsourced Python project files templates. """
 # noinspection PyUnresolvedReferences
 import sys
@@ -8,10 +8,12 @@ print(f"SetUp {__name__=} {sys.executable=} {sys.argv=} {sys.path=}")
 import setuptools
 
 setup_kwargs = {
-    'classifiers': [       'Development Status :: 3 - Alpha', 'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
-        'Natural Language :: English', 'Operating System :: OS Independent', 'Programming Language :: Python',
-        'Programming Language :: Python :: 3', 'Programming Language :: Python :: 3.9',
-        'Topic :: Software Development :: Libraries :: Python Modules', 'Typing :: Typed'],
+    'author': 'AndiEcker',
+    'author_email': 'aecker2@gmail.com',
+    'classifiers': [       'Development Status :: 3 - Alpha', 'Natural Language :: English', 'Operating System :: OS Independent',
+        'Programming Language :: Python', 'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.9', 'Topic :: Software Development :: Libraries :: Python Modules',
+        'Typing :: Typed'],
     'description': 'aedev namespace package portion project_tpls: outsourced Python project files templates',
     'extras_require': {       'dev': [       'aedev_project_tpls', 'aedev_aedev', 'anybadge', 'coverage-badge', 'aedev_git_repo_manager',
                        'flake8', 'mypy', 'pylint', 'pytest', 'pytest-cov', 'pytest-django', 'typing',
@@ -21,16 +23,16 @@ setup_kwargs = {
                          'pytest-cov', 'pytest-django', 'typing', 'types-setuptools', 'wheel', 'twine']},
     'install_requires': [],
     'keywords': ['configuration', 'development', 'environment', 'productivity'],
-    'license': 'OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
-    'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev V0.3.25 -->\n'
+    'license': 'GPL-3.0-or-later',
+    'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.25 -->\n'
  '<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.tpl_namespace_root V0.3.14 -->\n'
- '# project_tpls 0.3.45\n'
+ '# project_tpls 0.3.46\n'
  '\n'
  '[![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](\n'
  '    https://gitlab.com/aedev-group/aedev_project_tpls)\n'
  '[![LatestPyPIrelease](\n'
- '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.42?logo=python)](\n'
- '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.42)\n'
+ '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.45?logo=python)](\n'
+ '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.45)\n'
  '[![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](\n'
  '    https://pypi.org/project/aedev-project-tpls/#history)\n'
  '\n'
@@ -118,7 +120,7 @@ setup_kwargs = {
     'python_requires': '>=3.9',
     'setup_requires': [],
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.45',
+    'version': '0.3.46',
     'zip_safe': False,
 }
 
