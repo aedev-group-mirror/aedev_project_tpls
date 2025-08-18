@@ -1,1 +1,1 @@
-{os.linesep.join(norm_name(tpl['import_name']) for tpl in reversed(tpl_projects))}
+{os.linesep.join(norm_name(tpl['import_name']) for tpl in reversed(project_templates))}
