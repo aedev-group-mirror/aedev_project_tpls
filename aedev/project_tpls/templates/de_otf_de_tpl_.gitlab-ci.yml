@@ -59,4 +59,4 @@ pypi_deploy:
      - pip install --upgrade {" ".join(setup_requires)} pip setuptools twine wheel
      - python setup.py sdist bdist_wheel
   script:
-    - twine upload {"-repository testpypi " if project_name.startswith('aetst') else ""}--verbose dist/*
+    - twine upload {"--repository testpypi " if project_name.startswith('aetst') else ""}--verbose dist/*
