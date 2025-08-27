@@ -53,7 +53,7 @@ pypi_deploy:
     TWINE_USERNAME: $PYPI_USERNAME
     TWINE_PASSWORD: $PYPI_PASSWORD
   before_script:
-     - pip install --upgrade  pip build twine
+     - pip install --upgrade pip build twine
      - python -m build
   script:
     - twine upload --verbose dist/*
