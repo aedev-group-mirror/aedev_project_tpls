@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.52
 """ setup of aedev namespace package portion project_tpls: outsourced Python project files templates. """
 # noinspection PyUnresolvedReferences
 import sys
@@ -26,13 +26,13 @@ setup_kwargs = {
     'license': 'GPL-3.0-or-later',
     'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.26 -->\n'
  '<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls v0.3.18 -->\n'
- '# project_tpls 0.3.52\n'
+ '# project_tpls 0.3.53\n'
  '\n'
  '[![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](\n'
  '    https://gitlab.com/aedev-group/aedev_project_tpls)\n'
  '[![LatestPyPIrelease](\n'
- '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.52?logo=python)](\n'
- '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.52)\n'
+ '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.53?logo=python)](\n'
+ '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.53)\n'
  '[![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](\n'
  '    https://pypi.org/project/aedev-project-tpls/#history)\n'
  '\n'
@@ -102,8 +102,8 @@ setup_kwargs = {
     'long_description_content_type': 'text/markdown',
     'name': 'aedev_project_tpls',
     'package_data': {       '': [       'templates/de_tpl_README.md', 'templates/de_sfp_de_otf_de_tpl_.readthedocs.yaml',
-                    'templates/de_otf_de_tpl_dev_requirements.txt', 'templates/de_otf_de_tpl_.gitlab-ci.yml',
-                    'templates/de_otf_de_tpl_.gitignore', 'templates/pyproject.toml',
+                    'templates/de_otf_pyproject.toml', 'templates/de_otf_de_tpl_dev_requirements.txt',
+                    'templates/de_otf_de_tpl_.gitlab-ci.yml', 'templates/de_otf_de_tpl_.gitignore',
                     'templates/de_spt_app_de_otf_de_tpl_setup.py', 'templates/de_otf_SECURITY.md',
                     'templates/de_otf_LICENSE.md', 'templates/de_otf_de_tpl_CONTRIBUTING.rst',
                     'templates/tests/de_otf_de_tpl_test_{portion_name or project_name}.py',
@@ -119,7 +119,7 @@ setup_kwargs = {
         'Source': 'https://aedev.readthedocs.io/en/latest/_modules/aedev/project_tpls.html'},
     'python_requires': '>=3.9',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.52',
+    'version': '0.3.53',
     'zip_safe': False,
 }
 
