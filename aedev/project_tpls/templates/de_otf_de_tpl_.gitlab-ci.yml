@@ -59,4 +59,4 @@ pypi_deploy:
      - pip install --upgrade pip build twine
      - python -m build
   script:
-    - twine upload {"--repository testpypi " if project_name.startswith('aetst') else ""}--verbose dist/*
+    - twine upload {"--repository testpypi " if parent_folder == 'TsT' else ""}--verbose dist/*
