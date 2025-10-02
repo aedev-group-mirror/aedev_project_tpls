@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.55
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
 """ setup of aedev namespace package portion project_tpls: outsourced Python project files templates. """
 # noinspection PyUnresolvedReferences
 import sys
@@ -15,24 +15,24 @@ setup_kwargs = {
         'Programming Language :: Python :: 3.9', 'Topic :: Software Development :: Libraries :: Python Modules',
         'Typing :: Typed'],
     'description': 'aedev namespace package portion project_tpls: outsourced Python project files templates',
-    'extras_require': {       'dev': [       'aedev_project_tpls', 'aedev_aedev', 'anybadge', 'coverage-badge', 'aedev_git_repo_manager',
+    'extras_require': {       'dev': [       'aedev_project_tpls', 'aedev_aedev', 'anybadge', 'coverage-badge', 'aedev_project_manager',
                        'flake8', 'mypy', 'pylint', 'pytest', 'pytest-cov', 'pytest-django', 'typing',
                        'types-setuptools'],
         'docs': [],
-        'tests': [       'anybadge', 'coverage-badge', 'aedev_git_repo_manager', 'flake8', 'mypy', 'pylint', 'pytest',
+        'tests': [       'anybadge', 'coverage-badge', 'aedev_project_manager', 'flake8', 'mypy', 'pylint', 'pytest',
                          'pytest-cov', 'pytest-django', 'typing', 'types-setuptools']},
     'install_requires': [],
     'keywords': ['configuration', 'development', 'environment', 'productivity'],
     'license': 'GPL-3.0-or-later',
     'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.26 -->\n'
  '<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls v0.3.18 -->\n'
- '# project_tpls 0.3.56\n'
+ '# project_tpls 0.3.57\n'
  '\n'
  '[![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](\n'
  '    https://gitlab.com/aedev-group/aedev_project_tpls)\n'
  '[![LatestPyPIrelease](\n'
- '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.56?logo=python)](\n'
- '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.56)\n'
+ '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.57?logo=python)](\n'
+ '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.57)\n'
  '[![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](\n'
  '    https://pypi.org/project/aedev-project-tpls/#history)\n'
  '\n'
@@ -119,7 +119,7 @@ setup_kwargs = {
         'Source': 'https://aedev.readthedocs.io/en/latest/_modules/aedev/project_tpls.html'},
     'python_requires': '>=3.9',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.56',
+    'version': '0.3.57',
     'zip_safe': False,
 }
 
