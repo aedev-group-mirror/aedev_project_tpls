@@ -16,7 +16,7 @@ before_script:
 
 integrity:
   script:
-    - grm -v check-integrity
+    - project-manager -v check-integrity
   artifacts:
     paths:
       - mypy_report/
