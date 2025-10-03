@@ -10,8 +10,9 @@ build:
 sphinx:
    configuration: {DOCS_FOLDER}/conf.py
 
-formats:
-    - pdf
+# ae-3.10.25 : commented next 2 lines due to PDF build bug (https://github.com/readthedocs/readthedocs.org/issues/10015)
+# formats:
+#   - pdf
 
 python:
    install:
