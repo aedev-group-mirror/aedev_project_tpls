@@ -10,8 +10,11 @@ image: python:{MIN_PYTHON_VERSION}
 
 before_script:
   - python --version
-  - pip install --upgrade setuptools pip
-  - pip install --upgrade -r {REQ_FILE_NAME} -r {TESTS_FOLDER}/{REQ_FILE_NAME}
+  - pip install --upgrade setuptools pip pipx
+  # - pipx ensurepath
+  - pipx install aedev_project_manager
+  #- pip install --upgrade -r {frozen_req_file_path(REQ_FILE_NAME)} -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
+  - pip install --upgrade -r {REQ_FILE_NAME} -r {TESTS_FOLDER}/{REQ_FILE_NAME)}
 
 
 integrity:
