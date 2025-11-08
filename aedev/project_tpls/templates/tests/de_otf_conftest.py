@@ -17,7 +17,7 @@ def tst_app_key():
 
 
 @pytest.fixture
-def sys_argv_app_key_restore(tst_app_key):          # needed for tests using sys.argv/get_opt() of ConsoleApp
+def sys_argv_app_key_restore(tst_app_key):          # needed for tests using sys.argv/get_option() of ConsoleApp
     """ change sys.argv before test run to use test app key and restore sys.argv after test run. """
     old_argv = sys.argv
     sys.argv = [tst_app_key, ]

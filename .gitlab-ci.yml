@@ -1,5 +1,5 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.58
-image: python:3.9
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.59
+image: python:3.12
 
 
 
@@ -7,7 +7,10 @@ image: python:3.9
 
 before_script:
   - python --version
-  - pip install --upgrade setuptools pip
+  - pip install --upgrade setuptools pip pipx
+  # - pipx ensurepath
+  - pipx install aedev_project_manager
+  #- pip install --upgrade -r {frozen_req_file_path(REQ_FILE_NAME)} -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
   - pip install --upgrade -r requirements.txt -r tests/requirements.txt
 
 
