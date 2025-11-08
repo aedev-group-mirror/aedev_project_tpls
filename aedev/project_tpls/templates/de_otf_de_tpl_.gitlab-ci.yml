@@ -13,8 +13,7 @@ before_script:
   - pip install --upgrade setuptools pip pipx
   # - pipx ensurepath
   - pipx install aedev_project_manager
-  #- pip install --upgrade -r {frozen_req_file_path(REQ_FILE_NAME)} -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
-  - pip install --upgrade -r {REQ_FILE_NAME} -r {TESTS_FOLDER}/{REQ_FILE_NAME)}
+  - pip install --upgrade -r {REQ_FILE_NAME} -r {TESTS_FOLDER}/{REQ_FILE_NAME}
 
 
 integrity:
