@@ -11,14 +11,12 @@ image: python:{MIN_PYTHON_VERSION}
 before_script:
   - python --version
   - pip install --upgrade setuptools pip pipx
-  # - pipx ensurepath
-  - pipx install aedev_project_manager
   - pip install --upgrade -r {REQ_FILE_NAME} -r {TESTS_FOLDER}/{REQ_FILE_NAME}
 
 
 integrity:
   script:
-    - project-manager -v check-integrity
+    - pipx run --spec aedev_project_manager project-manager -v check-integrity
   artifacts:
     paths:
       - mypy_report/
