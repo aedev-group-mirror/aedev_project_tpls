@@ -6,6 +6,10 @@ import glob
 import pytest
 
 
+assert (cwd := os.getcwd()) == (prj_root := os.path.dirname(os.path.dirname(__file__))), f"wrong {cwd=}, != {prj_root=}"
+sys.path.insert(0, prj_root)  # add project root (==CWD) to sys.path (to run pytest w/o the 'python -m' prefix)
+
+
 SKIP_EXPRESSION = "'CI_PROJECT_ID' in os.environ"
 skip_gitlab_ci = pytest.mark.skipif(SKIP_EXPRESSION, reason="incomplete development environment and headless gitlab CI")
 
