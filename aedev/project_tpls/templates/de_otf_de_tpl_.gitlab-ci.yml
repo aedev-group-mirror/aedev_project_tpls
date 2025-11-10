@@ -27,7 +27,8 @@ pypi_deploy:
     TWINE_PASSWORD: $PYPI_PASSWORD
   before_script:
      - pip install --upgrade pip build twine
-     - pip install --upgrade -r requirements.txt -r tests/requirements.txt
+     # removed -r tests/requirements.txt to prevent installation of old/fixed/frozen ae_core/ae_console/...
+     - pip install --upgrade -r requirements.txt
      - python -m build
   script:
     - twine upload {"--repository testpypi " if parent_folder == 'TsT' else ""}--verbose dist/*
