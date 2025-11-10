@@ -26,13 +26,13 @@ setup_kwargs = {
     'license': 'GPL-3.0-or-later',
     'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.28 -->\n'
  '<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls v0.3.21 -->\n'
- '# project_tpls 0.3.63\n'
+ '# project_tpls 0.3.64\n'
  '\n'
  '[![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](\n'
  '    https://gitlab.com/aedev-group/aedev_project_tpls)\n'
  '[![LatestPyPIrelease](\n'
- '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.63?logo=python)](\n'
- '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.63)\n'
+ '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.64?logo=python)](\n'
+ '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.64)\n'
  '[![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](\n'
  '    https://pypi.org/project/aedev-project-tpls/#history)\n'
  '\n'
@@ -119,7 +119,7 @@ setup_kwargs = {
         'Source': 'https://aedev.readthedocs.io/en/latest/_modules/aedev/project_tpls.html'},
     'python_requires': '>=3.9',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.63',
+    'version': '0.3.64',
     'zip_safe': False,
 }
 
