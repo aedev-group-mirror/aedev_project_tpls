@@ -38,7 +38,7 @@ def restore_app_env(sys_argv_app_key_restore):
     # LOCAL IMPORT because a portion may not depend-on/use ae.core
     # noinspection PyProtectedMember
     # pylint: disable=import-outside-toplevel
-    from ae.core import _APP_INSTANCES, app_inst_lock, logger_shutdown, _unregister_app_instance     # type: ignore
+    from ae.core import _APP_INSTANCES, app_inst_lock, logger_shutdown, unregister_app_instance     # type: ignore
 
     yield sys_argv_app_key_restore
 
@@ -54,9 +54,9 @@ def restore_app_env(sys_argv_app_key_restore):
                 app_win.close()
 
             # remove app from ae.core app register/dict
-            _unregister_app_instance(key)
+            unregister_app_instance(key)
 
-        if not app_keys:    # else logger_shutdown got called already by _unregister_app_instance()
+        if not app_keys:    # else logger_shutdown got called already by unregister_app_instance()
             logger_shutdown()
 
 
