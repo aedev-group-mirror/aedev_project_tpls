@@ -68,6 +68,32 @@ def cons_app(restore_app_env):
 
 
 @pytest.fixture
+def patched_shutdown_wrapper():
+    """ log :func:`ae.console.ConsoleApp.shutdown` function calls and args, while preventing exit/quit of main app. """
+    exit_call_args = []
+
+    class _ExitCaller(Exception):
+        """ exception to recognize and simulate app shutdown for the code to be tested. """
+
+    def _exit_(*args, **kwargs):
+        # nonlocal exit_call_args
+        exit_call_args.append((args, kwargs))
+        raise _ExitCaller("to be caught by the _call_wrapper() of the patched_shutdown_wrapper unit test fixture")
+
+    def _call_wrapper(fun, *args, **kwargs):
+        exit_call_args.clear()
+        try:
+            ret = fun(*args, **kwargs)
+        except _ExitCaller:
+            ret = None
+        print(f"patched_shutdown_wrapper._call_wrapper {ret=}")
+        return exit_call_args
+
+    with patch('ae.console.ConsoleApp.shutdown', new=_exit_):
+        yield _call_wrapper
+
+
+@pytest.fixture
 def tst_system(cons_app):
     """ CURRENTLY NOT USED """
     # pylint: disable=import-outside-toplevel, no-name-in-module, import-error
