@@ -7,5 +7,5 @@ sphinx-rtd-theme
 sphinx_autodoc_typehints
 sphinx_paramlinks
 -r ../dev_requirements.txt
-# docs/conf.py is importing ae.dev_ops
-ae_dev_ops
+# docs/conf.py is importing aedev.vars
+aedev_vars

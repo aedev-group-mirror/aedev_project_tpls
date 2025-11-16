@@ -41,7 +41,7 @@ import sys
 
 from typing import Any, Dict
 
-from ae.dev_ops import ProjectDevVars                       # type: ignore
+from aedev.vars import ProjectDevVars                       # type: ignore
 
 # add project root path, above of this file (conf.py) and the {DOCS_FOLDER} folder, to sys.path
 project_path = os.path.dirname(os.path.dirname(__file__))
