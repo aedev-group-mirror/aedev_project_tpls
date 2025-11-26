@@ -25,13 +25,13 @@ setup_kwargs = {
     'license': 'GPL-3.0-or-later',
     'long_description': ('<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.28 -->\n'
  '<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls v0.3.21 -->\n'
- '# project_tpls 0.3.69\n'
+ '# project_tpls 0.3.70\n'
  '\n'
  '[![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](\n'
  '    https://gitlab.com/aedev-group/aedev_project_tpls)\n'
  '[![LatestPyPIrelease](\n'
- '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.69?logo=python)](\n'
- '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.69)\n'
+ '    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.70?logo=python)](\n'
+ '    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.70)\n'
  '[![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](\n'
  '    https://pypi.org/project/aedev-project-tpls/#history)\n'
  '\n'
@@ -104,9 +104,9 @@ setup_kwargs = {
                     'templates/de_otf_pyproject.toml', 'templates/de_otf_de_tpl_dev_requirements.txt',
                     'templates/de_otf_de_tpl_.gitlab-ci.yml', 'templates/de_otf_de_tpl_setup.py',
                     'templates/de_otf_de_tpl_.gitignore', 'templates/de_otf_SECURITY.md', 'templates/de_otf_LICENSE.md',
-                    'templates/de_otf_de_tpl_CONTRIBUTING.rst',
-                    'templates/tests/de_otf_de_tpl_test_{portion_name or project_name}.py',
-                    'templates/tests/de_otf_de_tpl_requirements.txt', 'templates/tests/de_otf_conftest.py',
+                    'templates/de_otf_de_tpl_CONTRIBUTING.rst', 'templates/tests/de_otf_de_tpl_requirements.txt',
+                    'templates/tests/de_otf_conftest.py',
+                    'templates/tests/de_tpl_test_{portion_name or project_name}.py',
                     'templates/de_sfp_docs/de_otf_Makefile', 'templates/de_sfp_docs/de_otf_de_tpl_requirements.txt',
                     'templates/de_sfp_docs/de_otf_de_tpl_index.rst', 'templates/de_sfp_docs/features_and_examples.rst',
                     'templates/de_sfp_docs/de_otf_de_tpl_conf.py']},
@@ -118,7 +118,7 @@ setup_kwargs = {
         'Source': 'https://aedev.readthedocs.io/en/latest/_modules/aedev/project_tpls.html'},
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.69',
+    'version': '0.3.70',
     'zip_safe': False,
 }
 
