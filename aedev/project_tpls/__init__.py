@@ -7,4 +7,4 @@ configuration files like e.g. `.gitignore`, as well as generic project documenta
 `LICENSE.md`.
 """
 
-__version__ = '0.3.69'
+__version__ = '0.3.70'

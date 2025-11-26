@@ -1,4 +1,4 @@
-""" project_tpls unit tests. """
+""" {portion_name or project_name} unit tests. """
 
 
 class TestDummyClass:
