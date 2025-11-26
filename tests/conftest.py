@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.67
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.68
 # pylint: disable=redefined-outer-name, unused-argument; suppress fixtures conflicts (silly pylint)
 """ fixtures for to test this project """
 import os
@@ -79,7 +79,15 @@ def patched_shutdown_wrapper():
 
     def _exit_(*args, **kwargs):
         # nonlocal exit_call_args
-        exit_call_args.append((args, kwargs))
+        if len(args) > 1:   # 1st arg is always the self/instance of the AppBase/ConsoleApp class
+            kwargs['exit_code'] = args[1]
+            if len(args) > 2:
+                kwargs['error_message'] = args[2]
+                if len(args) > 3:
+                    kwargs['timeout'] = args[3]
+                    if len(args) > 4:
+                        kwargs['_unexpected_args_'] = args[4:]
+        exit_call_args.append(kwargs)
         raise _ExitCaller("to be caught by the _call_wrapper() of the patched_shutdown_wrapper unit test fixture")
 
     def _call_wrapper(fun, *args, **kwargs):

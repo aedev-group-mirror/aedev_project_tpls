@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.67
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.68
 """ setup of aedev namespace package portion project_tpls: outsourced Python project files templates. """
 # noinspection PyUnresolvedReferences
 import sys
@@ -117,9 +117,9 @@ setup_kwargs = {
         'Documentation': 'https://aedev.readthedocs.io/en/latest/_autosummary/aedev.project_tpls.html',
         'Repository': 'https://gitlab.com/aedev-group/aedev_project_tpls',
         'Source': 'https://aedev.readthedocs.io/en/latest/_modules/aedev/project_tpls.html'},
-    'python_requires': '>=3.9',
+    'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.68',
+    'version': '0.3.69',
     'zip_safe': False,
 }
 
