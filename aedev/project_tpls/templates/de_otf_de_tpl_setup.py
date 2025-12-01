@@ -1,10 +1,12 @@
 """ setup of {project_desc}. """
-# noinspection PyUnresolvedReferences
 import sys
-print(f"SetUp {{__name__=}} {{sys.executable=}} {{sys.argv=}} {{sys.path=}}")
-
+# noinspection PyUnresolvedReferences
+import pathlib
 # noinspection PyUnresolvedReferences
 import setuptools
+
+
+print("SetUp " + __name__ + ": " + sys.executable + str(sys.argv) + f" {{sys.path=}}")
 
 # ReplaceWith#(setup_kwargs = {setup_kwargs_literal(setup_kwargs)})#
 
