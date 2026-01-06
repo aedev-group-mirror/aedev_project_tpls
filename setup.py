@@ -1,5 +1,5 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
-""" setup of aedev namespace package portion project_tpls: outsourced Python project files templates. """
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.71
+""" setup of aedev namespace package portion project_tpls: managed Python project files templates. """
 import sys
 # noinspection PyUnresolvedReferences
 import pathlib
@@ -22,7 +22,7 @@ setup_kwargs = {
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Typing :: Typed',
     ],
-    'description': 'aedev namespace package portion project_tpls: outsourced Python project files templates',
+    'description': 'aedev namespace package portion project_tpls: managed Python project files templates',
     'extras_require': {
         'dev': [
             'aedev_project_tpls',
@@ -99,7 +99,7 @@ setup_kwargs = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.71',
+    'version': '0.3.72',
     'zip_safe': False,
 }
 
