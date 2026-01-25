@@ -15,6 +15,20 @@ SKIP_EXPRESSION = "'CI_PROJECT_ID' in os.environ"
 skip_gitlab_ci = pytest.mark.skipif(SKIP_EXPRESSION, reason="incomplete development environment and headless gitlab CI")
 
 
+def pytest_configure(config):
+    """ pytest run configuration hook to define pytest.marker.integration as test class/method/function marker. """
+    config.addinivalue_line("markers", "integration: mark integration test; activate via env var RUN_INTEGRATION_TESTS")
+
+
+def pytest_collection_modifyitems(config, items):
+    """ hook to convert pytest.marker.integration into a skip marker if env var RUN_INTEGRATION_TESTS is set. """
+    if not os.getenv('RUN_INTEGRATION_TESTS'):
+        skip_integration = pytest.mark.skip(reason="integration tests only if OS env var RUN_INTEGRATION_TESTS is true")
+        for item in items:
+            if 'integration' in item.keywords:
+                item.add_marker(skip_integration)
+
+
 @pytest.fixture
 def tst_app_key():
     """ provide value used in tests for AppBase.app_key. """
