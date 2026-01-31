@@ -1,4 +1,3 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.73
 # pylint: disable=redefined-outer-name, unused-argument; suppress fixtures conflicts (silly pylint)
 """ fixtures for to test this project """
 import os
@@ -19,12 +18,7 @@ SKIP_EXPRESSION = "'CI_PROJECT_ID' in os.environ"
 skip_gitlab_ci = pytest.mark.skipif(SKIP_EXPRESSION, reason="incomplete development environment and headless gitlab CI")
 
 
-# pytest configuration hooks
-
-
-def pytest_configure(config):
-    """ pytest run configuration hook to define pytest.mark.integration as test class/method/function marker. """
-    config.addinivalue_line("markers", "integration: mark integration test; activate via env var RUN_INTEGRATION_TESTS")
+# pytest hooks
 
 
 # noinspection PyUnusedLocal
@@ -35,6 +29,34 @@ def pytest_collection_modifyitems(config, items):
         for item in items:
             if 'integration' in item.keywords:
                 item.add_marker(skip_integration)
+
+
+def pytest_configure(config):
+    """ pytest run configuration hook. """
+    # define pytest.mark.integration as test class/method/function marker
+    config.addinivalue_line("markers", "integration: mark integration test; activate via env var RUN_INTEGRATION_TESTS")
+    # register xdist group marker to suppresses pytest warning if not installed (used e.g. in tests/test_integration.py)
+    config.addinivalue_line("markers", "xdist_group(name): group tests for sequential execution if xdist is installed")
+
+
+failed_items_node_ids = []                  #: stores the node ids of all the failed test items
+
+
+# noinspection PyUnusedLocal
+@pytest.hookimpl(hookwrapper=True, tryfirst=True)
+def pytest_runtest_makereport(item, call):
+    """ log all failed test items (e.g., for checks done in pytest_runtest_setup hook). """
+    outcome = yield
+    rep = outcome.get_result()
+    if rep.failed:
+        failed_items_node_ids.append(item.nodeid)
+
+
+def pytest_runtest_setup(item):
+    """ check if item is an integration test, and if yes then skip it, if a previous integration test failed. """
+    path = item.nodeid.split('::')[0]
+    if path == 'tests/test_integration.py' and path in [node_id.split('::')[0] for node_id in failed_items_node_ids]:
+        pytest.skip(f"all the other integration tests due to the fail of '{failed_items_node_ids[-1]}'")
 
 
 # fixtures and helpers
