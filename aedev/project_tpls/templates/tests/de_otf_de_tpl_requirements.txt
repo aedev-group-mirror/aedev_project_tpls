@@ -1,10 +1,9 @@
 anybadge
-coverage-badge
 flake8
 mypy
 pylint
 pytest
-pytest-cov
+pytest-cov                  # includes coverage package
 pytest-django
 typing
 types-setuptools            # for mypy
