@@ -2,8 +2,9 @@ anybadge
 flake8
 mypy
 pylint
+{'pylint-django' if project_type == DJANGO_PRJ else ""}
 pytest
 pytest-cov                  # includes coverage package
-pytest-django
+{'pytest-django' if project_type == DJANGO_PRJ else ""}
 typing
 types-setuptools            # for mypy
