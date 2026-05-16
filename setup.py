@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.76
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.77
 """ setup of aedev namespace package portion project_tpls: managed Python project files templates. """
 import sys
 # noinspection PyUnresolvedReferences
@@ -33,7 +33,6 @@ setup_kwargs = {
             'pylint',
             'pytest',
             'pytest-cov',
-            'pytest-django',
             'typing',
             'types-setuptools',
         ],
@@ -45,7 +44,6 @@ setup_kwargs = {
             'pylint',
             'pytest',
             'pytest-cov',
-            'pytest-django',
             'typing',
             'types-setuptools',
         ],
@@ -97,7 +95,7 @@ setup_kwargs = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.77',
+    'version': '0.3.78',
     'zip_safe': False,
 }
 
