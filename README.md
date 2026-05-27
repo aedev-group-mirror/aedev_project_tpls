@@ -1,14 +1,14 @@
-<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.32 -->
-<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls v0.3.27 -->
-# project_tpls 0.3.78
+<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev vlocal -->
+<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls vlocal -->
+# project_tpls 0.3.79
 
 [![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](
     https://gitlab.com/aedev-group/aedev_project_tpls)
 [![LatestPyPIrelease](
-    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.78?logo=python)](
-    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.78)
+    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.79?logo=python)](
+    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.79)
 [![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](
-    https://pypi.org/project/aedev-project-tpls/#history)
+    https://pypi.org/project/aedev-project_tpls/#history)
 
 >aedev namespace package portion project_tpls: managed Python project files templates.
 
@@ -26,13 +26,13 @@
 [![PyPIWheel](https://img.shields.io/pypi/wheel/aedev_project_tpls)](
     https://gitlab.com/aedev-group/aedev_project_tpls/)
 [![PyPIFormat](https://img.shields.io/pypi/format/aedev_project_tpls)](
-    https://pypi.org/project/aedev-project-tpls/)
+    https://pypi.org/project/aedev-project_tpls/)
 [![PyPILicense](https://img.shields.io/pypi/l/aedev_project_tpls)](
     https://gitlab.com/aedev-group/aedev_project_tpls/-/blob/develop/LICENSE.md)
 [![PyPIStatus](https://img.shields.io/pypi/status/aedev_project_tpls)](
-    https://libraries.io/pypi/aedev-project-tpls)
+    https://libraries.io/pypi/aedev-project_tpls)
 [![PyPIDownloads](https://img.shields.io/pypi/dm/aedev_project_tpls)](
-    https://pypi.org/project/aedev-project-tpls/#files)
+    https://pypi.org/project/aedev-project_tpls/#files)
 
 
 
@@ -43,7 +43,7 @@ aedev.project_tpls package
 in the currently active virtual environment:
  
 ```shell script
-pip install aedev-project-tpls
+pip install aedev-project_tpls
 ```
 
 if you want to contribute to this portion then first fork
@@ -54,13 +54,17 @@ following command in the root folder of this repository
 (aedev_project_tpls):
 
 ```shell script
-pip install -e .[dev]
+pip install --editable .[dev]
 ```
 
-the last command will install this package portion, along with the tools you need
-to develop and run tests or to extend the portion documentation. to contribute only to the unit tests or to the
-documentation of this portion, replace the setup extras key `dev` in the above command with `tests` or `docs`
-respectively.
+this command installs this package portion project
+along with the necessary tools to modify the source code,
+run unit tests, and build documentation. to install only
+the dependencies required for a specific task,  replace
+`dev` with one of the following:
+
+    * `tests`: for contributing to the unit test suite
+    * `docs`: for maintaining and building documentation
 
 more detailed explanations on how to contribute to this project
 [are available here](
