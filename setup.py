@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.77
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
 """ setup of aedev namespace package portion project_tpls: managed Python project files templates. """
 import sys
 # noinspection PyUnresolvedReferences
@@ -61,31 +61,31 @@ setup_kwargs = {
     'name': 'aedev_project_tpls',
     'package_data': {
         '': [
-            'templates/de_tpl_README.md',
-            'templates/de_sfp_de_otf_de_tpl_.readthedocs.yaml',
-            'templates/de_otf_pyproject.toml',
-            'templates/de_otf_de_tpl_dev_requirements.txt',
-            'templates/de_otf_de_tpl_.gitlab-ci.yml',
-            'templates/de_otf_de_tpl_setup.py',
-            'templates/de_otf_de_tpl_.gitignore',
-            'templates/de_otf_SECURITY.md',
-            'templates/de_otf_LICENSE.md',
-            'templates/de_otf_de_tpl_CONTRIBUTING.rst',
-            'templates/tests/de_otf_de_tpl_requirements.txt',
-            'templates/tests/de_otf_conftest.py',
-            'templates/tests/de_tpl_test_{portion_name or project_name}.py',
-            'templates/de_sfp_docs/de_otf_Makefile',
-            'templates/de_sfp_docs/de_otf_de_tpl_requirements.txt',
-            'templates/de_sfp_docs/de_otf_de_tpl_index.rst',
-            'templates/de_sfp_docs/features_and_examples.rst',
-            'templates/de_sfp_docs/de_otf_de_tpl_conf.py',
+            'templates/fSt-PutMar-.gitlab-ci.yml',
+            'templates/PutMar-SECURITY.md',
+            'templates/PutMar-pyproject.toml',
+            'templates/PutMar-LICENSE.md',
+            'templates/fSt-PutMar-CONTRIBUTING.rst',
+            'templates/fSt-README.md',
+            'templates/fSt-PutMar-dev_requirements.txt',
+            'templates/fSt-PutMar-.gitignore',
+            'templates/SkpPor-fSt-PutMar-.readthedocs.yaml',
+            'templates/fSt-PutMar-setup.py',
+            'templates/SkpPor-docs/fSt-PutMar-index.rst',
+            'templates/SkpPor-docs/PutMar-Makefile',
+            'templates/SkpPor-docs/features_and_examples.rst',
+            'templates/SkpPor-docs/fSt-PutMar-conf.py',
+            'templates/SkpPor-docs/fSt-PutMar-requirements.txt',
+            'templates/tests/fSt-test_{portion_name or project_name}.py',
+            'templates/tests/PutMar-conftest.py',
+            'templates/tests/fSt-PutMar-requirements.txt',
         ],
     },
     'packages': [
         'aedev.project_tpls',
         'aedev.project_tpls.templates',
+        'aedev.project_tpls.templates.SkpPor-docs',
         'aedev.project_tpls.templates.tests',
-        'aedev.project_tpls.templates.de_sfp_docs',
     ],
     'project_urls': {
         'Bug Tracker': 'https://gitlab.com/aedev-group/aedev_project_tpls/-/issues',
@@ -95,7 +95,7 @@ setup_kwargs = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.78',
+    'version': '0.3.79',
     'zip_safe': False,
 }
 
