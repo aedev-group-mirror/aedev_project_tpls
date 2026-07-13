@@ -39,7 +39,7 @@ import sys
 # found at https://github.com/readthedocs/sphinx_rtd_theme - not needed
 # import sphinx_rtd_theme
 
-from typing import Any, Dict
+from typing import Any
 
 from aedev.project_vars import ProjectDevVars                       # type: ignore
 
@@ -85,7 +85,7 @@ extensions.extend(_ for _ in docs_requires if _.startswith("sphinx_"))   # remov
 # -- autodoc config
 # None==enabled (True failing on RTD builds - replaced with None) - see https://github.com/sphinx-doc/sphinx/issues/5459
 ENABLED = None
-autodoc_default_options: Dict[str, Any] = dict(
+autodoc_default_options: dict[str, Any] = dict(
     autosummary_generate=ENABLED,
     members=ENABLED,
 )

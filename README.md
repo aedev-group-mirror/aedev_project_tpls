@@ -1,14 +1,14 @@
-<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev vlocal -->
+<!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.33 -->
 <!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls vlocal -->
-# project_tpls 0.3.79
+# project_tpls 0.3.80
 
 [![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](
     https://gitlab.com/aedev-group/aedev_project_tpls)
 [![LatestPyPIrelease](
-    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.79?logo=python)](
-    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.79)
+    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.80?logo=python)](
+    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.80)
 [![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](
-    https://pypi.org/project/aedev-project_tpls/#history)
+    https://pypi.org/project/aedev-project-tpls/#history)
 
 >aedev namespace package portion project_tpls: managed Python project files templates.
 
@@ -26,13 +26,13 @@
 [![PyPIWheel](https://img.shields.io/pypi/wheel/aedev_project_tpls)](
     https://gitlab.com/aedev-group/aedev_project_tpls/)
 [![PyPIFormat](https://img.shields.io/pypi/format/aedev_project_tpls)](
-    https://pypi.org/project/aedev-project_tpls/)
+    https://pypi.org/project/aedev-project-tpls/)
 [![PyPILicense](https://img.shields.io/pypi/l/aedev_project_tpls)](
     https://gitlab.com/aedev-group/aedev_project_tpls/-/blob/develop/LICENSE.md)
 [![PyPIStatus](https://img.shields.io/pypi/status/aedev_project_tpls)](
-    https://libraries.io/pypi/aedev-project_tpls)
+    https://libraries.io/pypi/aedev-project-tpls)
 [![PyPIDownloads](https://img.shields.io/pypi/dm/aedev_project_tpls)](
-    https://pypi.org/project/aedev-project_tpls/#files)
+    https://pypi.org/project/aedev-project-tpls/#files)
 
 
 
@@ -43,7 +43,7 @@ aedev.project_tpls package
 in the currently active virtual environment:
  
 ```shell script
-pip install aedev-project_tpls
+pip install aedev-project-tpls
 ```
 
 if you want to contribute to this portion then first fork
