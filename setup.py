@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.79
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.80
 """ setup of aedev namespace package portion project_tpls: managed Python project files templates. """
 import sys
 # noinspection PyUnresolvedReferences
@@ -68,14 +68,14 @@ setup_kwargs = {
             'templates/fSt-PutMar-setup.py',
             'templates/fSt-README.md',
             'templates/PutMar-LICENSE.md',
-            'templates/PutMar-pyproject.toml',
             'templates/PutMar-SECURITY.md',
             'templates/SkpPor-fSt-PutMar-.readthedocs.yaml',
+            'templates/PutMar-pyproject.toml',
             'templates/SkpPor-docs/features_and_examples.rst',
-            'templates/SkpPor-docs/fSt-PutMar-conf.py',
             'templates/SkpPor-docs/fSt-PutMar-index.rst',
             'templates/SkpPor-docs/fSt-PutMar-requirements.txt',
             'templates/SkpPor-docs/PutMar-Makefile',
+            'templates/SkpPor-docs/fSt-PutMar-conf.py',
             'templates/tests/fSt-PutMar-requirements.txt',
             'templates/tests/fSt-test_{portion_name or project_name}.py',
             'templates/tests/PutMar-conftest.py',
@@ -95,7 +95,7 @@ setup_kwargs = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.80',
+    'version': '0.3.81',
     'zip_safe': False,
 }
 
