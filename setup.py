@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.82
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.83
 """ setup of aedev namespace package portion project_tpls: managed Python project files templates. """
 import pathlib
 import sys
@@ -61,7 +61,6 @@ setup_kwargs: dict[str, Any] = {
     'package_data': {
         '': [
             'templates/fSt-PutMar-.gitignore',
-            'templates/fSt-PutMar-.gitlab-ci.yml',
             'templates/fSt-PutMar-CONTRIBUTING.rst',
             'templates/fSt-PutMar-dev_requirements.txt',
             'templates/fSt-README.md',
@@ -70,6 +69,7 @@ setup_kwargs: dict[str, Any] = {
             'templates/SkpPor-fSt-PutMar-.readthedocs.yaml',
             'templates/PutMar-pyproject.toml',
             'templates/fSt-PutMar-setup.py',
+            'templates/fSt-PutMar-.gitlab-ci.yml',
             'templates/SkpPor-docs/features_and_examples.rst',
             'templates/SkpPor-docs/fSt-PutMar-index.rst',
             'templates/SkpPor-docs/fSt-PutMar-requirements.txt',
@@ -94,7 +94,7 @@ setup_kwargs: dict[str, Any] = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.83',
+    'version': '0.3.84',
     'zip_safe': False,
 }
 
