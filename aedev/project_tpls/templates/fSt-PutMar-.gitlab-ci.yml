@@ -60,7 +60,7 @@ pypi_deploy:
     TWINE_USERNAME: $PYPI_USERNAME
     TWINE_PASSWORD: $PYPI_PASSWORD
   before_script:
-     - pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD} pip build twine
+     - pip install --upgrade build pip twine
      - python -m build
   script:
     # use test.pypi.org for integration/unit test projects (if is under :data:`~aedev.base.TEST_PROJECTS_PARENT_FOLDER`)
