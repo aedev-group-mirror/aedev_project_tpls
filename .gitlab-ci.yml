@@ -8,8 +8,8 @@ image: python:3.12
 before_script:
   - python --version
   - pip --version
-  - pip install --upgrade setuptools pip pipx
-  - pip version
+  - pip install --upgrade pip pipx setuptools
+  - pip --version
   - >
     pip install --upgrade --ignore-installed --uploaded-prior-to=P9D
     -r requirements.txt
