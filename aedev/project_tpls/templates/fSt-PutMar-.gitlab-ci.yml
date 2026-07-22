@@ -11,8 +11,8 @@ image: python:{MIN_PYTHON_VERSION}
 before_script:
   - python --version
   - pip --version
-  - pip install --upgrade setuptools pip pipx
-  - pip version
+  - pip install --upgrade pip pipx setuptools
+  - pip --version
   - >
     pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD}
     -r {frozen_req_file_path()}
