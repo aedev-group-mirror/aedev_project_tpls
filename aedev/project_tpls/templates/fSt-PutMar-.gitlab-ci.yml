@@ -15,7 +15,7 @@ before_script:
     pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD}
     -r {frozen_req_file_path()}
     -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
-  - pip install --upgrade {cooldown_excluded_projects}
+  {"- pip install --upgrade --ignore-installed " + " ".join(_c_) if (_c_ := cooldown_excluded_projects) else ""}
 
 integrity:
   script:
