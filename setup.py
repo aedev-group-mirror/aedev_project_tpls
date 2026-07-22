@@ -1,15 +1,14 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.81
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.82
 """ setup of aedev namespace package portion project_tpls: managed Python project files templates. """
-import sys
-# noinspection PyUnresolvedReferences
 import pathlib
-# noinspection PyUnresolvedReferences
+import sys
+from typing import Any
 import setuptools
 
 
 print("SetUp " + __name__ + ": " + sys.executable + str(sys.argv) + f" {sys.path=}")
 
-setup_kwargs = {
+setup_kwargs: dict[str, Any] = {
     'author': 'AndiEcker',
     'author_email': 'aecker2@gmail.com',
     'classifiers': [
@@ -65,12 +64,12 @@ setup_kwargs = {
             'templates/fSt-PutMar-.gitlab-ci.yml',
             'templates/fSt-PutMar-CONTRIBUTING.rst',
             'templates/fSt-PutMar-dev_requirements.txt',
-            'templates/fSt-PutMar-setup.py',
             'templates/fSt-README.md',
             'templates/PutMar-LICENSE.md',
             'templates/PutMar-SECURITY.md',
             'templates/SkpPor-fSt-PutMar-.readthedocs.yaml',
             'templates/PutMar-pyproject.toml',
+            'templates/fSt-PutMar-setup.py',
             'templates/SkpPor-docs/features_and_examples.rst',
             'templates/SkpPor-docs/fSt-PutMar-index.rst',
             'templates/SkpPor-docs/fSt-PutMar-requirements.txt',
@@ -95,10 +94,10 @@ setup_kwargs = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.82',
+    'version': '0.3.83',
     'zip_safe': False,
 }
 
 if __name__ == "__main__":
     setuptools.setup(**setup_kwargs)
-    pass
+    ...

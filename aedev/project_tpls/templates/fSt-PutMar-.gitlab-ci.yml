@@ -10,9 +10,12 @@ image: python:{MIN_PYTHON_VERSION}
 
 before_script:
   - python --version
-  - pip install --upgrade setuptools pip pipx
-  - pip install --upgrade -r {frozen_req_file_path()} -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
-
+  - pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD} setuptools pip pipx
+  - >
+    pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD}
+    -r {frozen_req_file_path()}
+    -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
+  - pip install --upgrade {cooldown_excluded_projects}
 
 integrity:
   script:
@@ -55,7 +58,7 @@ pypi_deploy:
     TWINE_USERNAME: $PYPI_USERNAME
     TWINE_PASSWORD: $PYPI_PASSWORD
   before_script:
-     - pip install --upgrade pip build twine
+     - pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD} pip build twine
      - python -m build
   script:
     # use test.pypi.org for integration/unit test projects (if is under :data:`~aedev.base.TEST_PROJECTS_PARENT_FOLDER`)
