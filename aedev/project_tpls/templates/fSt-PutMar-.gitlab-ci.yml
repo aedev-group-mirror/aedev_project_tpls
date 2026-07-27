@@ -14,10 +14,10 @@ before_script:
   - pip install --upgrade pip pipx setuptools
   - pip --version
   - >
-    pip install --upgrade --ignore-installed --uploaded-prior-to={PYPI_COOLDOWN_PERIOD}
+    pip install --upgrade --force-reinstall --uploaded-prior-to={PYPI_COOLDOWN_PERIOD}
     -r {frozen_req_file_path()}
     -r {frozen_req_file_path(TESTS_FOLDER + "/" + REQ_FILE_NAME)}
-  {"- pip install --upgrade --ignore-installed " + " ".join(_c_) if (_c_ := cooldown_excluded_projects) else ""}
+  {"- pip install --upgrade --force-reinstall " + " ".join(_c_) if (_c_ := cooldown_excluded_projects) else ""}
 
 integrity:
   script:
