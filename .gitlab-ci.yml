@@ -1,4 +1,4 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.87
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.88
 image: python:3.12
 
 
@@ -11,7 +11,7 @@ before_script:
   - pip install --upgrade pip pipx setuptools
   - pip --version
   - >
-    pip install --upgrade --ignore-installed --uploaded-prior-to=P9D
+    pip install --upgrade --force-reinstall --uploaded-prior-to=P9D
     -r requirements.txt
     -r tests/requirements.txt
   

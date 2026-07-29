@@ -41,9 +41,12 @@ import sys
 
 from typing import Any
 
+
+from aedev.base import PROJECT_VERSION_SEP                          # type: ignore
 from aedev.project_vars import ProjectDevVars                       # type: ignore
 
 # add project root path, above of this file (conf.py) and the {DOCS_FOLDER} folder, to sys.path
+# noinspection PyTypeChecker
 project_path = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, project_path)
 
@@ -79,8 +82,8 @@ extensions = [
     'sphinx.ext.autosectionlabel',  # create refs for all titles, subtitles
     'sphinx_rtd_theme',
 ]
-# --- add the extensions that get installed via pip
-extensions.extend(_ for _ in docs_requires if _.startswith("sphinx_"))   # remove Sphinx from other sphinx extensions
+# --- add the extensions that get installed via pip; remove Sphinx from other sphinx extensions
+extensions.extend(_.split(PROJECT_VERSION_SEP)[0] for _ in docs_requires if _.startswith("sphinx_"))
 
 # -- autodoc config
 # None==enabled (True failing on RTD builds - replaced with None) - see https://github.com/sphinx-doc/sphinx/issues/5459
