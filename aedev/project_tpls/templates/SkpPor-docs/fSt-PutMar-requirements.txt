@@ -4,8 +4,10 @@ sphinx
 # using package name sphinx_rtd_theme with underscores raises Sphinx Extension error:
 # .. Could not import extension sphinx_rtd_theme==1.0.0 (exception: No module named 'sphinx_rtd_theme==1')
 sphinx-rtd-theme
-sphinx_autodoc_typehints
+# pinned to last working version, because RTD docs build is failing with 3.13.0 (Claude assumes PR #716 broke it)
+sphinx_autodoc_typehints{PROJECT_VERSION_SEP}3.10.3
 sphinx_paramlinks
 -r ../dev_requirements.txt
-# docs/conf.py is importing aedev.project_vars
+# docs/conf.py is importing aedev.base and aedev.project_vars
+aedev_base
 aedev_project_vars
