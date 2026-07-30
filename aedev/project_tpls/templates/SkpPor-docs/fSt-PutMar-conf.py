@@ -80,7 +80,6 @@ extensions = [
     # 'sphinx.ext.coverage',        # not needed because all covered; test by adding to "make html" the "-b coverage"
     # .. option and then check _build/coverage/python.txt (or add it to index.rst).
     'sphinx.ext.autosectionlabel',  # create refs for all titles, subtitles
-    'sphinx_rtd_theme',
 ]
 # --- add the extensions that get installed via pip; remove Sphinx from other sphinx extensions
 extensions.extend(_.split(PROJECT_VERSION_SEP)[0] for _ in docs_requires if _.startswith("sphinx_"))
@@ -170,3 +169,32 @@ master_doc = 'index'    # pylint: disable=invalid-name # Sphinx default is 'inde
 # workaround Kivy bug until fixing PR #7435 get released (with Kivy 2.1.0)
 os.environ['KIVY_DOC'] = '1'
 os.environ['KIVY_NO_ARGS'] = '1'
+
+
+# debug and temporary workaround/fix of:
+# sphinx.errors.ExtensionError:
+# Handler <function process_docstring at 0x7fb62c9d9bc0> for event 'autodoc-process-docstring' threw an exception
+# (exception: 'getset_descriptor' object is not iterable)
+
+# noinspection PyProtectedMember
+import sphinx_autodoc_typehints._resolver._type_hints as _sat_type_hints
+# noinspection PyProtectedMember
+_orig_build_localns = _sat_type_hints._build_localns
+
+
+def _debug_and_fix_build_localns(obj, localns):
+    """ overwrite _build_localns to debug and fix the docs build error (execute in docs/ via source build_docs.sh) """
+    try:
+        return _orig_build_localns(obj, localns)
+    except TypeError:
+        print("*" * 80)
+        print("CRASH IN sphinx_autodoc_typehints._resolver._type_hints._build_localns FOR OBJECT:")
+        print("   *  repr:", repr(obj))
+        print("   *  type:", type(obj))
+        print("   *  module:", getattr(obj, "__module__", "?"))
+        print("   *  qualname:", getattr(obj, "__qualname__", "?"))
+        print("*" * 80)
+        return localns
+
+
+_sat_type_hints._build_localns = _debug_and_fix_build_localns

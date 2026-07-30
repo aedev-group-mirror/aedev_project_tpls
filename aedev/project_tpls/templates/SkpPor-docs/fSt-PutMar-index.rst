@@ -1,5 +1,5 @@
 {project_name} documentation
-################################
+{'#' * len(project_name + ' documentation')}
 
 welcome to the documentation of the {project_name} project.
 
@@ -7,13 +7,14 @@ welcome to the documentation of the {project_name} project.
 .. include:: features_and_examples.rst
 
 
-code maintenance guidelines
-***************************
+code and maintenance guidelines
+*******************************
 
 
-portions code requirements
-==========================
+project code guidelines
+=======================
 
+    * open source
     * pure python
     * fully typed (:pep:`526`)
     * fully :ref:`documented <{namespace_name}-portions>`
@@ -41,6 +42,8 @@ main module
 
     {import_name}
 
+
+{manuals_include}
 
 
 indices and tables
