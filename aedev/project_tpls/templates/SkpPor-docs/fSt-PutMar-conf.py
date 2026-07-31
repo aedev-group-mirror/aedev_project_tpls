@@ -170,6 +170,8 @@ master_doc = 'index'    # pylint: disable=invalid-name # Sphinx default is 'inde
 os.environ['KIVY_DOC'] = '1'
 os.environ['KIVY_NO_ARGS'] = '1'
 
+keep_warnings = True    # keep docs build warnings inline in the resulting doc/html/pdf
+
 
 # debug and temporary workaround/fix of:
 # sphinx.errors.ExtensionError:

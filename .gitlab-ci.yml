@@ -1,9 +1,13 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.90
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.91
 image: python:3.12
+
+
+
+
 
 .check_rules: &check-rules
   rules:
-    - if: $CI_COMMIT_BRANCH == "{MAIN_BRANCH}"
+    - if: $CI_COMMIT_BRANCH == "develop"
       when: never
     - if: $CI_COMMIT_BRANCH =~ /^release/
       when: never
@@ -22,6 +26,7 @@ integrity:
       pip install --upgrade --force-reinstall --uploaded-prior-to=P9D
       -r requirements.txt
       -r tests/requirements.txt
+    
   script:
     - pipx run --spec aedev_project_manager project-manager -v check-integrity
   artifacts:
@@ -30,7 +35,6 @@ integrity:
       - .pylint/
       - htmlcov/
       - .pytest_cache
-
 
 pages:
   stage: deploy
