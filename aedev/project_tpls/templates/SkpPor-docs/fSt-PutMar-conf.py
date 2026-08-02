@@ -170,6 +170,7 @@ master_doc = 'index'    # pylint: disable=invalid-name # Sphinx default is 'inde
 os.environ['KIVY_DOC'] = '1'
 os.environ['KIVY_NO_ARGS'] = '1'
 
+
 keep_warnings = True    # keep docs build warnings inline in the resulting doc/html/pdf
 
 
@@ -188,14 +189,17 @@ def _debug_and_fix_build_localns(obj, localns):
     """ overwrite _build_localns to debug and fix the docs build error (execute in docs/ via source build_docs.sh) """
     try:
         return _orig_build_localns(obj, localns)
-    except TypeError:
-        print("*" * 80)
-        print("CRASH IN sphinx_autodoc_typehints._resolver._type_hints._build_localns FOR OBJECT:")
-        print("   *  repr:", repr(obj))
-        print("   *  type:", type(obj))
-        print("   *  module:", getattr(obj, "__module__", "?"))
-        print("   *  qualname:", getattr(obj, "__qualname__", "?"))
-        print("*" * 80)
+    except TypeError as exc:
+        print(f" **** TypeError {exc=} in sphinx_autodoc_typehints._resolver._type_hints._build_localns")
+        try:
+            # noinspection PyUnusedImports
+            from ae.system import full_stack_trace
+            print(full_stack_trace(exc))
+        except ImportError:
+            import traceback
+            traceback.print_exc()
+        print(f"  *** repr={repr(obj)} type={type(obj)} module={getattr(obj, "__module__", "?")}"
+              f" qualname: {getattr(obj, "__qualname__", "?")}")
         return localns
 
 
