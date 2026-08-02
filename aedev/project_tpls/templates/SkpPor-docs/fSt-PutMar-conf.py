@@ -190,7 +190,7 @@ def _debug_and_fix_build_localns(obj, localns):
     try:
         return _orig_build_localns(obj, localns)
     except TypeError as exc:
-        print(f" **** TypeError {exc=} in sphinx_autodoc_typehints._resolver._type_hints._build_localns")
+        print(f" **** TypeError {{exc=}} in sphinx_autodoc_typehints._resolver._type_hints._build_localns")
         try:
             # noinspection PyUnusedImports
             from ae.system import full_stack_trace
@@ -198,8 +198,8 @@ def _debug_and_fix_build_localns(obj, localns):
         except ImportError:
             import traceback
             traceback.print_exc()
-        print(f"  *** repr={repr(obj)} type={type(obj)} module={getattr(obj, "__module__", "?")}"
-              f" qualname: {getattr(obj, "__qualname__", "?")}")
+        print(f"  *** repr={{repr(obj)}} type={{type(obj)}} module={{getattr(obj, '__module__', '?')}}"
+              f" qualname: {{getattr(obj, '__qualname__', '?')}}")
         return localns
 
 
