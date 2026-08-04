@@ -174,9 +174,8 @@ os.environ['KIVY_NO_ARGS'] = '1'
 keep_warnings = True    # keep docs build warnings inline in the resulting doc/html/pdf
 
 
-# debug and temporary workaround/fix of:
-# sphinx.errors.ExtensionError:
-# Handler <function process_docstring at 0x7fb62c9d9bc0> for event 'autodoc-process-docstring' threw an exception
+# debug and temporary workaround/fix of sphinx.errors.ExtensionError:
+# Handler <function process_docstring> for event 'autodoc-process-docstring' threw an exception
 # (exception: 'getset_descriptor' object is not iterable)
 
 # noinspection PyProtectedMember
@@ -191,15 +190,11 @@ def _debug_and_fix_build_localns(obj, localns):
         return _orig_build_localns(obj, localns)
     except TypeError as exc:
         print(f" **** TypeError {{exc=}} in sphinx_autodoc_typehints._resolver._type_hints._build_localns")
-        try:
-            # noinspection PyUnusedImports
-            from ae.system import full_stack_trace
-            print(full_stack_trace(exc))
-        except ImportError:
-            import traceback
-            traceback.print_exc()
-        print(f"  *** repr={{repr(obj)}} type={{type(obj)}} module={{getattr(obj, '__module__', '?')}}"
-              f" qualname: {{getattr(obj, '__qualname__', '?')}}")
+        # noinspection PyUnusedImports
+        from ae.system import full_stack_trace
+        print(full_stack_trace(exc, frames_with_locals=6))
+        print(f"  *** obj: repr={{repr(obj)}} / type={{type(obj)}} / module={{getattr(obj, '__module__', '?')}}")
+        print(f"  *** localns: repr={{repr(localns)}}")
         return localns
 
 
