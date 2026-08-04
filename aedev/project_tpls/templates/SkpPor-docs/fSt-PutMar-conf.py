@@ -172,30 +172,3 @@ os.environ['KIVY_NO_ARGS'] = '1'
 
 
 keep_warnings = True    # keep docs build warnings inline in the resulting doc/html/pdf
-
-
-# debug and temporary workaround/fix of sphinx.errors.ExtensionError:
-# Handler <function process_docstring> for event 'autodoc-process-docstring' threw an exception
-# (exception: 'getset_descriptor' object is not iterable)
-
-# noinspection PyProtectedMember
-import sphinx_autodoc_typehints._resolver._type_hints as _sat_type_hints
-# noinspection PyProtectedMember
-_orig_build_localns = _sat_type_hints._build_localns
-
-
-def _debug_and_fix_build_localns(obj, localns):
-    """ overwrite _build_localns to debug and fix the docs build error (execute in docs/ via source build_docs.sh) """
-    try:
-        return _orig_build_localns(obj, localns)
-    except TypeError as exc:
-        print(f" **** TypeError {{exc=}} in sphinx_autodoc_typehints._resolver._type_hints._build_localns")
-        # noinspection PyUnusedImports
-        from ae.system import full_stack_trace
-        print(full_stack_trace(exc, frames_with_locals=6))
-        print(f"  *** obj: repr={{repr(obj)}} / type={{type(obj)}} / module={{getattr(obj, '__module__', '?')}}")
-        print(f"  *** localns: repr={{repr(localns)}}")
-        return localns
-
-
-_sat_type_hints._build_localns = _debug_and_fix_build_localns
