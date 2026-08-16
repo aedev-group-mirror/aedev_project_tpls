@@ -1,7 +1,8 @@
-""" project_tpls unit tests. """
-from aedev.project_tpls import __version__
+""" project_tpls unit tests dummy. """
+
+from aedev.project_tpls import __version__ as version
 
 
-class TestDummyClass:
-    def test_dummy(self):
-        assert __version__
+def test_version():
+    assert version
+    assert isinstance(version, str)
