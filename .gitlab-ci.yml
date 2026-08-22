@@ -30,14 +30,25 @@ integrity:
   script:
     - pipx run --spec aedev_project_manager project-manager -v check-integrity
     - |
-      if [ -d tests ]; then
-        test -d htmlcov || { echo "CI-ERROR: tests/ exists, but htmlcov/ was not created"; exit 1; }
-        test -d .pytest_cache || { echo "CI-ERROR: tests/ exists, but .pytest_cache/ was not created"; exit 1; }
+      if [ -f tests/requirements.txt ]; then
+        MISSING=""
+        for d in $ARTIFACT_DIRS; do
+          [ -d "$d" ] || MISSING="$MISSING $d"
+        done
+        if [ -n "$MISSING" ]; then
+          echo "CI-CHECK-ERROR: tests/requirements.txt exists, but required artifact paths were not created:"
+          for d in $MISSING; do
+            echo "    - $d/"
+          done
+          exit 1
+        fi
       else
-        mkdir -p htmlcov .pytest_cache
+        mkdir -p $ARTIFACT_DIRS
       fi
+  variables:
+    ARTIFACT_DIRS: "mypy_report .pylint htmlcov .pytest_cache"
   artifacts:
-    paths:
+    paths:  # unremovable redundancy with integrity.variables.ARTIFACT_DIRS and the `cp`-commands in pages.script
       - mypy_report/
       - .pylint/
       - htmlcov/
@@ -52,14 +63,14 @@ pages:
     - ls -l -R
     - mkdir -p public/coverage
     - |
-      if [ -d tests ]; then
+      if [ -f tests/requirements.txt ]; then
         cp -a -f -v htmlcov/. public/coverage/
         cp -a -f -v .pytest_cache/coverage.svg public/
+        cp -a -f -v mypy_report/lineprecision.txt public/
+        cp -a -f -v mypy_report/mypy.svg public/
+        cp -a -f -v .pylint/pylint.svg public/
+        cp -a -f -v .pylint/pylint.log public/
       fi
-    - cp -a -f -v mypy_report/lineprecision.txt public/
-    - cp -a -f -v mypy_report/mypy.svg public/
-    - cp -a -f -v .pylint/pylint.svg public/
-    - cp -a -f -v .pylint/pylint.log public/
   artifacts:
     paths:
       - public
