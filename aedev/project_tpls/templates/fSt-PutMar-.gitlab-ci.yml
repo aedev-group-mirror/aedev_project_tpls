@@ -25,12 +25,12 @@ integrity:                      # run integrity tests
     - pip install --upgrade pip pipx setuptools
     - pip --version
     - >
-      {"pip install -U --force-reinstall --uploaded-prior-to=" + PYPI_COOLDOWN_PERIOD
-       if check_reqs_cool else "# no cooldown dependencies"}
-      {" ".join(check_reqs_cool) if check_reqs_cool else "echo no cooldown dependencies"}
+      {"pip install --upgrade --force-reinstall --uploaded-prior-to=" + PYPI_COOLDOWN_PERIOD
+       if check_reqs_cool else "# no cooldown dependencies to install"}
+      {"\n      ".join(check_reqs_cool) if check_reqs_cool else ""}
     - >
-      {"pip install --upgrade --force-reinstall " if check_reqs_hot else "# no hot dependencies"}
-      {" ".join(check_reqs_hot) if check_reqs_hot else "echo no hot dependencies"}
+      {"pip install --upgrade --force-reinstall " if check_reqs_hot else "# no hot dependencies to install"}
+      {"\n      ".join(check_reqs_hot) if check_reqs_hot else ""}
   script:
     - pipx run --spec aedev_project_manager project-manager -v check-integrity
     - |
