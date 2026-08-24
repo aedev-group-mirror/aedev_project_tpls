@@ -22,11 +22,18 @@ integrity:                      # run integrity tests
     - pip install --upgrade pip pipx setuptools
     - pip --version
     - >
-      pip install -U --force-reinstall --uploaded-prior-to=P9D
-      anybadge flake8 mypy pylint pytest pytest-cov typing types-setuptools
+      pip install --upgrade --force-reinstall --uploaded-prior-to=P9D
+      anybadge
+      flake8
+      mypy
+      pylint
+      pytest
+      pytest-cov
+      typing
+      types-setuptools
     - >
-      # no hot dependencies
-      echo no hot dependencies
+      # no hot dependencies to install
+
   script:
     - pipx run --spec aedev_project_manager project-manager -v check-integrity
     - |
