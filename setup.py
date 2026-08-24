@@ -94,7 +94,7 @@ setup_kwargs: dict[str, Any] = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.100',
+    'version': '0.3.101',
     'zip_safe': False,
 }
 
