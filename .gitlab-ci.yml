@@ -1,7 +1,7 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls vlocal
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.102
 image: python:3.12
-
-
+ 
+ 
 .check_rules: &check-rules      # minimize job-runs on gitlab CI by separating rules for push/test and deploy
   rules:
     - if: $CI_COMMIT_BRANCH == "develop"
@@ -33,7 +33,7 @@ integrity:                      # run integrity tests
       types-setuptools
     - >
       # no hot dependencies to install
-
+      
   script:
     - pipx run --spec aedev_project_manager project-manager -v check-integrity
     - |
