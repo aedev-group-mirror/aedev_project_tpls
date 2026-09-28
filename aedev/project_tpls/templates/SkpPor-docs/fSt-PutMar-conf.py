@@ -42,7 +42,6 @@ import sys
 from typing import Any
 
 
-from ae.base import URI_SVC_SEP                                     # type: ignore
 from aedev.base import PROJECT_VERSION_SEP                          # type: ignore
 from aedev.project_vars import ProjectDevVars                       # type: ignore
 
@@ -118,10 +117,10 @@ exclude_patterns = ["features_and_examples.rst"]
 # example configuration for intersphinx: refer to the Python standard library
 # - found at https://www.mankier.com/1/sphinx-all and https://github.com/traverseda/pycraft/blob/master/docs/conf.py.
 intersphinx_mapping = dict(
-    python=(f"https{URI_SVC_SEP}docs.python.org/" + ".".join(map(str, sys.version_info[0:2])), None),
-    kivy=(f"https{URI_SVC_SEP}kivy.org/doc/stable/", None),
-    ae=(f"https{URI_SVC_SEP}ae.readthedocs.io/en/latest/", None),
-    aedev=(f"https{URI_SVC_SEP}aedev.readthedocs.io/en/latest/", None),
+    python=('https://docs.python.org/' + '.'.join(map(str, sys.version_info[0:2])), None),
+    kivy=("https://kivy.org/doc/stable/", None),
+    ae=("https://ae.readthedocs.io/en/latest/", None),
+    aedev=("https://aedev.readthedocs.io/en/latest/", None),
 )
 
 # -- options for HTML output -------------------------------------------------
