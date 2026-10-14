@@ -1,7 +1,7 @@
 # {project_name} {project_type} {project_version}
 
 {project_name} is a Python multi-platform {project_type} project based on the [__Kivy__ Framework](https://kivy.org) 
-and some portions of the [__ae__ namespace(Application Environment)](https://ae.readthedocs.io "ae on rtd").
+and some portions of the [__ae__ namespace(Application Environment)](https://ae.readthedocs.io "ae on RTD").
 
 the source code is available at [Gitlab]({repo_url})
 maintained by the user group {repo_group}.

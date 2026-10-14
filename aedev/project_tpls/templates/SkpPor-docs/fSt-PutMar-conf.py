@@ -2,10 +2,8 @@
 configuration file for the Sphinx documentation builder
 =======================================================
 
-this file only contains a selection of the most common options. for a full list see the documentation at
-`https://www.sphinx-doc.org/en/master/config`__.
-
-recommended section header underlines (see also `https://devguide.python.org/documentation/markup/#sections`__ and
+the recommended documentation section header underlines hierarchy is (see
+`https://devguide.python.org/documentation/markup/#sections`__ and
 `https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections`__):
 
     # with over-line, for parts
@@ -14,6 +12,8 @@ recommended section header underlines (see also `https://devguide.python.org/doc
     -, for subsections
     ^, for sub-subsections
     _, for paragraphs (changed because the double-high-comma cannot be used in docstrings).
+
+for more configuration options see `https://www.sphinx-doc.org/en/master/config`__.
 
 
 ReadTheDocs Server Infrastructure Configuration
@@ -115,12 +115,16 @@ exclude_patterns = ["features_and_examples.rst"]
 
 # example configuration for intersphinx: refer to the Python standard library
 # - found at https://www.mankier.com/1/sphinx-all and https://github.com/traverseda/pycraft/blob/master/docs/conf.py.
-intersphinx_mapping = dict(
-    python=(f"https{URI_SVC_SEP}docs.python.org/" + ".".join(map(str, sys.version_info[0:2])), None),
-    kivy=(f"https{URI_SVC_SEP}kivy.org/doc/stable/", None),
-    ae=(f"https{URI_SVC_SEP}ae.readthedocs.io/en/latest/", None),
-    aedev=(f"https{URI_SVC_SEP}aedev.readthedocs.io/en/latest/", None),
-)
+intersphinx_mapping = {
+    'ae': (f"https{URI_SVC_SEP}ae.readthedocs.io/en/latest/", None),
+    'aedev': (f"https{URI_SVC_SEP}aedev.readthedocs.io/en/latest/", None),
+    'enaml': (f"https{URI_SVC_SEP}'https://docs.enthought.com/enaml/", None),
+    'kivy': (f"https{URI_SVC_SEP}kivy.org/doc/stable/", None),
+    'packaging': (f"https{URI_SVC_SEP}packaging.pypa.io/en/latest/", None),
+    'python': (f"https{URI_SVC_SEP}docs.python.org/" + ".".join(map(str, sys.version_info[0:2])), None),
+    'requests': (f"https{URI_SVC_SEP}requests.readthedocs.io/en/latest/", None),
+    'toga': (f"https{URI_SVC_SEP}'https://toga.beeware.org/en/latest/", None),
+}
 
 # -- options for HTML output -------------------------------------------------
 
