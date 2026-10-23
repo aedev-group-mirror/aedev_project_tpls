@@ -37,14 +37,12 @@ import os
 import sys
 from typing import cast, Any
 
-# import sphinx_rtd_theme    - import not needed (see https://github.com/readthedocs/sphinx_rtd_theme)
-
-from ae.base import URI_SVC_SEP                                     # type: ignore
+from ae.base import os_path_dirname                                 # type: ignore
 from aedev.base import PROJECT_VERSION_SEP                          # type: ignore
 from aedev.project_vars import ProjectDevVars                       # type: ignore
 
 # add project root path, above of this file (conf.py) and the {DOCS_FOLDER} folder, to sys.path
-project_path = os.path.dirname(os.path.dirname(cast(str, __file__)))
+project_path = os_path_dirname(os_path_dirname(cast(str, __file__)))
 sys.path.insert(0, project_path)
 
 
@@ -115,16 +113,16 @@ exclude_patterns = ["features_and_examples.rst"]
 
 # example configuration for intersphinx: refer to the Python standard library
 # - found at https://www.mankier.com/1/sphinx-all and https://github.com/traverseda/pycraft/blob/master/docs/conf.py.
-intersphinx_mapping = {
-    'ae': (f"https{URI_SVC_SEP}ae.readthedocs.io/en/latest/", None),
-    'aedev': (f"https{URI_SVC_SEP}aedev.readthedocs.io/en/latest/", None),
-    'enaml': (f"https{URI_SVC_SEP}'https://docs.enthought.com/enaml/", None),
-    'kivy': (f"https{URI_SVC_SEP}kivy.org/doc/stable/", None),
-    'packaging': (f"https{URI_SVC_SEP}packaging.pypa.io/en/latest/", None),
-    'python': (f"https{URI_SVC_SEP}docs.python.org/" + ".".join(map(str, sys.version_info[0:2])), None),
-    'requests': (f"https{URI_SVC_SEP}requests.readthedocs.io/en/latest/", None),
-    'toga': (f"https{URI_SVC_SEP}'https://toga.beeware.org/en/latest/", None),
-}
+intersphinx_mapping = dict(
+    ae=("https://ae.readthedocs.io/en/latest/", None),
+    aedev=("https://aedev.readthedocs.io/en/latest/", None),
+    enaml=("https://docs.enthought.com/enaml/", None),
+    kivy=("https://kivy.org/doc/stable/", None),
+    packaging=("https://packaging.pypa.io/en/latest/", None),
+    python=("https://docs.python.org/" + ".".join(map(str, sys.version_info[0:2])), None),
+    requests=("https://requests.readthedocs.io/en/latest/", None),
+    toga=("https://toga.beeware.org/en/latest/", None),
+)
 
 # -- options for HTML output -------------------------------------------------
 
