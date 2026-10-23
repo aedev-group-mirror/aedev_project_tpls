@@ -4,6 +4,7 @@ sphinx_rtd_theme
 sphinx_autodoc_typehints
 sphinx_paramlinks
 -r ../dev_requirements.txt
-# docs/conf.py is importing aedev.base and aedev.project_vars
+# docs/conf.py is importing ae.base, aedev.base and aedev.project_vars
+ae_base
 aedev_base
 aedev_project_vars
