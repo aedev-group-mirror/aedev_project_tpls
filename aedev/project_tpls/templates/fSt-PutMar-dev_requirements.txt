@@ -1,1 +1,3 @@
 {os.linesep.join(norm_name(tpl['import_name']) for tpl in reversed(project_templates))}
+{"ae_system   # module_attr() needed for pjm.utils.import_dependencies()/aedev.commands.venv_module_var_val()\n"
+ if project_type == DJANGO_PRJ else ""}

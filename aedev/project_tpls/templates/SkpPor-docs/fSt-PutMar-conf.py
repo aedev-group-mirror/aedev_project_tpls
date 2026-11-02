@@ -1,38 +1,4 @@
-"""
-configuration file for the Sphinx documentation builder
-=======================================================
-
-the recommended documentation section header underlines hierarchy is (see
-`https://devguide.python.org/documentation/markup/#sections`__ and
-`https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections`__):
-
-    # with over-line, for parts
-    * with over-line, for chapters
-    =, for sections
-    -, for subsections
-    ^, for sub-subsections
-    _, for paragraphs (changed because the double-high-comma cannot be used in docstrings).
-
-for more configuration options see `https://www.sphinx-doc.org/en/master/config`__.
-
-
-ReadTheDocs Server Infrastructure Configuration
-===============================================
-
-configure on the ReadTheDocs server (`https://readthedocs.org/dashboard/{project_name}/advanced`__)
-in the Admin area the following default settings:
-
-    * Settings/Programming Language: **Python**
-    * Advanced Settings/Global settings/Default branch: **{MAIN_BRANCH}**
-    * Advanced Settings/Default settings/Requirements file: **{DOCS_FOLDER}/{REQ_FILE_NAME}**
-    * Advanced Settings/Default settings/Install Project: **check**
-    * Advanced Settings/Default settings/Use system packages: **check**
-
-.. note::
-    use .readthedocs.yaml to get more actual versions of Python (>3.7 see https://blog.readthedocs.com/default-python-3)
-    and Sphinx (>1.8).
-
-"""
+""" configuration file for the Sphinx ReadTheDocs/RTD HTML documentation builder """
 import os
 import sys
 from typing import cast, Any
@@ -106,10 +72,10 @@ numfig = True                       # pylint: disable=invalid-name
 # add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates', '_templates/autosummary']
 
-# list of patterns, relative to source directory, that match files and directories to ignore when looking for source
-# files. this pattern also affects html_static_path and html_extra_path.
+# list of patterns, relative to source directory, that match included files and directories to ignore when looking for
+# source files. this pattern also affects html_static_path and html_extra_path.
+# w/o "features_and_examples*.rst" or 'man' + "/**/*.rst" because they are included via toctree.
 # exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-exclude_patterns = ["features_and_examples.rst"]
 
 # example configuration for intersphinx: refer to the Python standard library
 # - found at https://www.mankier.com/1/sphinx-all and https://github.com/traverseda/pycraft/blob/master/docs/conf.py.
@@ -156,7 +122,9 @@ elif html_theme == 'sphinx_rtd_theme':
     html_theme_options = dict(
         # display_version=True,   # this setting is no longer supported by this theme
         # gitlab_url=f"{repo_root}/{project_name}/docs/index.rst",
-        navigation_depth=-1,
+        navigation_depth=3,         # ==2 section levels; put -1 to disable or 0 to only show document title
+        titles_only=False,
+        collapse_navigation=False,
         prev_next_buttons_location='both',
         sticky_navigation=True,
         # removed in V 0.1.68: style_external_links=True,
