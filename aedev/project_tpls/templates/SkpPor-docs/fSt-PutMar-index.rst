@@ -3,34 +3,11 @@
 
 welcome to the documentation of the {project_name} project.
 
+.. toctree::
+    :maxdepth: 1
 
-.. include:: features_and_examples.rst
-
-
-code and maintenance guidelines
-*******************************
-
-
-project code guidelines
-=======================
-
-    * open source
-    * pure python
-    * fully typed (:pep:`526`)
-    * fully :ref:`documented <{namespace_name}-portions>`
-    * 100 % test coverage
-    * multi thread save
-    * code checks (using pylint and flake8)
-
-
-design pattern and software principles
-======================================
-
-    * `DRY <http://en.wikipedia.org/wiki/Don%27t_repeat_yourself>`_
-    * `KISS <http://en.wikipedia.org/wiki/Keep_it_simple_stupid>`_
-
-
-.. include:: ../CONTRIBUTING.rst
+    {format_file_paths("features_and_examples*.rst", path_prefix=DOCS_FOLDER)}
+    code-conventions.rst
 
 
 main module
@@ -42,9 +19,14 @@ main module
 
     {import_name}
 
+{'''
 
-{manuals_include}
+manuals and tutorials
+*********************
 
+.. toctree::
+
+    ''' + _manus if (_manus := format_file_paths('man', "**", "*.rst", path_prefix=DOCS_FOLDER) else ""}
 
 indices and tables
 ******************
