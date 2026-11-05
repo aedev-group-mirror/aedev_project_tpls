@@ -1,16 +1,16 @@
 <!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.aedev v0.3.36 -->
 <!-- THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.namespace_root_tpls v0.3.33 -->
-# project_tpls 0.3.108
+# project_tpls 0.3.109
 
 [![GitLab develop](https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/develop?logo=python)](
     https://gitlab.com/aedev-group/aedev_project_tpls)
 [![LatestPyPIrelease](
-    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.108?logo=python)](
-    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.108)
+    https://img.shields.io/gitlab/pipeline/aedev-group/aedev_project_tpls/release0.3.109?logo=python)](
+    https://gitlab.com/aedev-group/aedev_project_tpls/-/tree/release0.3.109)
 [![PyPIVersions](https://img.shields.io/pypi/v/aedev_project_tpls)](
     https://pypi.org/project/aedev-project-tpls/#history)
 
->aedev namespace package portion project_tpls: managed Python project files templates.
+>aedev namespace package portion project_tpls: generic templates for Python projects.
 
 [![Coverage](https://aedev-group.gitlab.io/aedev_project_tpls/coverage.svg)](
     https://aedev-group.gitlab.io/aedev_project_tpls/coverage/index.html)

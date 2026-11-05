@@ -10,6 +10,7 @@ welcome to the documentation of the {project_name} project.
     code-conventions.rst
 
 
+***********
 main module
 ***********
 
@@ -21,13 +22,15 @@ main module
 
 {'''
 
+*********************
 manuals and tutorials
 *********************
 
 .. toctree::
 
-    ''' + _manus if (_manus := format_file_paths('man', "**", "*.rst", path_prefix=DOCS_FOLDER) else ""}
+    ''' + _manuals if (_manuals := format_file_paths('man', "**", "*.rst", path_prefix=DOCS_FOLDER)) else ""}
 
+******************
 indices and tables
 ******************
 

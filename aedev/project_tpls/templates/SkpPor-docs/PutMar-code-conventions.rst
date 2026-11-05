@@ -4,6 +4,6 @@
 
 
 code conventions and maintenance guidelines
-*******************************************
+===========================================
 
 .. include:: ../CONTRIBUTING.rst

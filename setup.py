@@ -1,5 +1,5 @@
-# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.107
-""" setup of aedev namespace package portion project_tpls: managed Python project files templates. """
+# THIS FILE IS EXCLUSIVELY MAINTAINED by the project aedev.project_tpls v0.3.108
+""" setup of aedev namespace package portion project_tpls: generic templates for Python projects. """
 import pathlib
 import sys
 from typing import Any
@@ -21,7 +21,7 @@ setup_kwargs: dict[str, Any] = {
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Typing :: Typed',
     ],
-    'description': 'aedev namespace package portion project_tpls: managed Python project files templates',
+    'description': 'aedev namespace package portion project_tpls: generic templates for Python projects',
     'extras_require': {
         'dev': [
             'aedev_project_tpls',
@@ -61,8 +61,6 @@ setup_kwargs: dict[str, Any] = {
     'package_data': {
         '': [
             'templates/fSt-PutMar-.gitignore',
-            'templates/fSt-PutMar-CONTRIBUTING.rst',
-            'templates/fSt-PutMar-dev_requirements.txt',
             'templates/PutMar-LICENSE.md',
             'templates/PutMar-SECURITY.md',
             'templates/PutMar-pyproject.toml',
@@ -70,12 +68,14 @@ setup_kwargs: dict[str, Any] = {
             'templates/fSt-PutMar-.gitlab-ci.yml',
             'templates/fSt-README.md',
             'templates/fSt-PutMar-setup.py',
+            'templates/fSt-PutMar-CONTRIBUTING.rst',
+            'templates/fSt-PutMar-dev_requirements.txt',
             'templates/SkpPor-docs/features_and_examples.rst',
-            'templates/SkpPor-docs/fSt-PutMar-index.rst',
             'templates/SkpPor-docs/PutMar-build_docs.sh',
-            'templates/SkpPor-docs/fSt-PutMar-conf.py',
             'templates/SkpPor-docs/fSt-PutMar-requirements.txt',
             'templates/SkpPor-docs/PutMar-code-conventions.rst',
+            'templates/SkpPor-docs/fSt-PutMar-conf.py',
+            'templates/SkpPor-docs/fSt-PutMar-index.rst',
             'templates/SkpTyp-playground_tests/PutMar-conftest.py',
             'templates/SkpTyp-playground_tests/fSt-PutMar-requirements.txt',
             'templates/SkpTyp-playground_tests/fSt-test_{portion_name or project_name}.py',
@@ -95,7 +95,7 @@ setup_kwargs: dict[str, Any] = {
     },
     'python_requires': '>=3.12',
     'url': 'https://gitlab.com/aedev-group/aedev_project_tpls',
-    'version': '0.3.108',
+    'version': '0.3.109',
     'zip_safe': False,
 }
 

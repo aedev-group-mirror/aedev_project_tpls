@@ -1,10 +1,11 @@
 """
-managed Python project files templates
-======================================
+generic templates for Python projects
+=====================================
 
-this package provides generic templates of basic project files for all types of Python projects. this includes project
-configuration files like e.g. `.gitignore`, as well as generic project documentation files like `CONTRIBUTING.rst` or
-`LICENSE.md`.
+this portion provides templates of basic files for all types of Python projects. this includes project
+configuration files like e.g. `.gitignore`, as well as generic project documentation files like
+`CONTRIBUTING.rst` or `LICENSE.md`.
 """
 
-__version__ = '0.3.108'
+
+__version__ = '0.3.109'
